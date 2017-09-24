@@ -9,14 +9,20 @@ namespace Client
 
       public List<List<KeyCode[]>> bindings = new List<List<KeyCode[]>>();
 
-      public ActionBinding(string combinations)
-      {
-          ParseCombinations(combinations.Split(','));
-      }
+      // Action callacks for delegating
+      public delegate void ActionHandler();
+      public event ActionHandler Handler;
 
-      public ActionBinding(string[] combinations)
+      private static void NoopHandler() { }
+
+      public ActionBinding(string combinations) : this (combinations, NoopHandler) {}
+      public ActionBinding(string[] combinations) : this(combinations, NoopHandler) {}
+      public ActionBinding(string combination, ActionHandler handler) : this(combination.Split(','), handler) {}
+
+      public ActionBinding(string[] combination, ActionHandler handler)
       {
-          ParseCombinations(combinations);
+          ParseCombinations(combination);
+          Handler += handler;
       }
 
       private void ParseCombinations(string[] combinations)
