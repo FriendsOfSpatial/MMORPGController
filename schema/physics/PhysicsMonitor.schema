@@ -1,0 +1,18 @@
+package physics;
+
+import "phyics/Vector3D.schema";
+
+type MovementPhysics {
+  physics.Vector3D velocity = 1;
+  physics.Vector3D force = 2;
+  float speed = 3;
+  bool jumping = 4;
+  bool grounded = 5;
+  bool running = 6;
+}
+
+component PhysicsMonitor {
+  id = 5000;
+
+  MovementPhysics movement = 1;
+}
