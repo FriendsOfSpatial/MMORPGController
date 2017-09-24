@@ -154,7 +154,7 @@ success of the game.
 
 #### KeyMap
 
-First you'll need to add the [KeyMap](../blob/master/scripts/Util/KeyMap.cs) file to
+First you'll need to add the [KeyMap](blob/master/scripts/Util/KeyMap.cs) file to
 your scripts directory. Rather than putting that whole file here, I'll briefly discuss
 what it is and how it works.
 
@@ -185,7 +185,7 @@ that would do different things in your controller.
 
 Now that we've got our "Mappable Keys" sorted out and supported, we'll need a way
 to actually build a binding between a combination of keys and an associated action.
-This is the purpose of the [ActionBinding](../blob/master/scripts/Client/ActionBinding.cs)
+This is the purpose of the [ActionBinding](blob/master/scripts/Client/ActionBinding.cs)
 class. Like the KeyMap, there's no need to post the entire block of code here, but
 you'll need to understand how it works.
 
