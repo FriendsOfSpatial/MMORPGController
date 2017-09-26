@@ -1,0 +1,19 @@
+package mmocontroler.physics;
+
+enum State {
+  STANDING = 0;
+  WALKING = 1;
+  RUNNING = 2;
+  STRAFING = 3;
+  SWIMMING = 4;
+  JUMPING = 5;
+  FALLING = 6;
+  GLIDING = 7;
+  FLYING = 8;
+}
+
+component MovementState {
+  id = 5001;
+
+  State movement_state = 1;
+}

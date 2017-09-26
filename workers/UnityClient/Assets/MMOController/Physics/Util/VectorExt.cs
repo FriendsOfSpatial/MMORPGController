@@ -1,4 +1,4 @@
-namespace Physics.Util
+namespace MMOController.Physics.Util
 {
   public static class VectorExt
   {

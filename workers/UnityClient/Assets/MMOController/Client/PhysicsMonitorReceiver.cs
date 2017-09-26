@@ -1,9 +1,9 @@
 using UnityEngine;
 using Improbably.Unity.Visualizer;
-using Physics;
-using Physics.Util;
+using MMOControler.Physics;
+using MMOController.Physics.Util;
 
-namespace Physics.Behaviour
+namespace Mmocontroller.Client
 {
   [WorkerType(Improbably.Unity.WorkerPlatform.UnityClient)]
   public class PhysicsMonitorReceiver : MonoBehaviour

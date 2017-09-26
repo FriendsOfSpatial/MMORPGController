@@ -1,0 +1,18 @@
+package mmocontroller.client;
+
+component MovementControllerState {
+  id = 5002;
+
+  // Moving (Forward, Backward, Strafe)
+  float move_x_axis = 1;
+  float move_y_axis = 2;
+
+  // Rotation (Right, Left)
+  float turn_y_axis = 5;
+
+  // Jumping
+  bool jump = 10;
+
+  // Movement Modifiers
+  bool run = 20;
+}
